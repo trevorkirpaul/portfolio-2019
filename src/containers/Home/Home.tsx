@@ -1,11 +1,12 @@
 import React from 'react'
 
+import Layout from '../../components/Layout'
+import TitlePanel from '../../components/TitlePanel'
+
 const Home = () => (
-  <div>
-    <h1>Trevor Kirpaul</h1>
-  </div>
+  <Layout>
+    <TitlePanel title='Trevor Kirpaul' subTitle='Web Developer' />
+  </Layout>
 )
 
-export {
-  Home as default
-}
+export { Home as default }
