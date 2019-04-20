@@ -9,4 +9,4 @@ const Home = () => (
   </Layout>
 )
 
-export { Home as default }
+export default Home
