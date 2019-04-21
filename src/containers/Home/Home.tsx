@@ -4,9 +4,19 @@ import Layout from '../../components/Layout'
 import TitlePanel from '../../components/TitlePanel'
 import Text from '../../components/Text'
 import Link from '../../components/Link'
+import NavBar from '../../components/NavBar'
 
 const Home = () => (
   <Layout>
+    <NavBar
+      links={[
+        {
+          id: '001',
+          name: 'home',
+          url: '/'
+        }
+      ]}
+    />
     <TitlePanel title='Trevor Kirpaul' subTitle='Web Developer' />
 
     <Layout.Spacer marginTop='15px' marginBottom='35px' />
@@ -20,9 +30,9 @@ const Home = () => (
 
     <Layout.Spacer marginTop='15px' marginBottom='35px' />
 
-    <Layout.Hero>
+    <Layout.Section>
       <Link url='https://github.com/trevorkirpaul'>github</Link>
-    </Layout.Hero>
+    </Layout.Section>
   </Layout>
 )
 

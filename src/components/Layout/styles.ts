@@ -16,4 +16,6 @@ const Spacer = styled.div<SpacerProps>`
   margin-bottom: ${({ marginBottom }) => marginBottom};
 `
 
-export { Layout, Hero, Spacer }
+const Section = styled.div``
+
+export { Layout, Hero, Spacer, Section }
