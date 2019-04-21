@@ -41,7 +41,7 @@ export interface LinkProps {
    * internally used
    */
   to?: string | (LocationDescriptorObject<any> & string)
-  className: string
+  className?: string
 }
 
 const Link = ({
