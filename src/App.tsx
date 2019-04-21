@@ -1,11 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import Home from './containers/Home'
+import Router from './containers/Router'
 
-const App = () => (
-  <Home />
-)
+const App = () => <Router />
 
-export {
-  App as default
-}
+export default App

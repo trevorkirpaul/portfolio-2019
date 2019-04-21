@@ -9,6 +9,7 @@ export interface NavBarProps {
     id: string
     name: string
     url: string
+    active: boolean
   }[]
 }
 
@@ -17,7 +18,9 @@ const NavBar = ({ links }: NavBarProps) => (
     <S.UL>
       {links.map(link => (
         <S.LI key={link.id}>
-          <Link url={link.url}>{link.name}</Link>
+          <Link url={link.url} type='internal' active={link.active}>
+            {link.name}
+          </Link>
         </S.LI>
       ))}
     </S.UL>
