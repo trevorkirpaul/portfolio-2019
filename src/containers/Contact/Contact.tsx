@@ -8,8 +8,14 @@ const Contact = () => (
   <Layout>
     <TitlePanel title='Contact' />
     <Layout.Hero>
-      <Link url='http://www.twitter.com'>twitter</Link>
+      <Link url='https://twitter.com/trevorkirpaul'>twitter</Link>
     </Layout.Hero>
+
+    <Layout.Spacer marginBottom='25px' />
+
+    <Layout.Section>
+      <Link url='https://github.com/trevorkirpaul'>github</Link>
+    </Layout.Section>
   </Layout>
 )
 

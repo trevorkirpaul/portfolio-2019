@@ -16,4 +16,9 @@ const Text = ({ type, children }: TextProps) => {
   }
 }
 
+Text.defaultProps = {
+  type: 'paragraph',
+  children: 'missing text'
+}
+
 export default Text
