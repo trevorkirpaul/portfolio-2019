@@ -21,7 +21,7 @@ const Home = () => (
     <Layout.Spacer marginTop='15px' marginBottom='35px' />
 
     <Layout.Hero>
-      <Link url='http://www.github.com'>github</Link>
+      <Link url='https://github.com/trevorkirpaul'>github</Link>
     </Layout.Hero>
   </Layout>
 )
