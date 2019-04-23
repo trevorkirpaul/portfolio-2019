@@ -18,4 +18,9 @@ const Spacer = styled.div<SpacerProps>`
 
 const Section = styled.div``
 
-export { Layout, Hero, Spacer, Section }
+const Flex = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+export { Layout, Hero, Spacer, Section, Flex }
