@@ -2,7 +2,7 @@
 
 ## ToDo
 
-- [ ] implement theming via `styled-components`
+- [x] implement theming via `styled-components`
 - [ ] add changelog
 - [ ] add comments for all interfaces
 - [ ] implement testing (Jest/write tests)
