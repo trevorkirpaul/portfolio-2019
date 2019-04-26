@@ -1,7 +1,10 @@
 import color from './color'
 
-const theme: object = {
-  color
+const themeDay = {
+  color: color.day
 }
 
-export default theme
+const themeNight = {
+  color: color.night
+}
+export { themeDay, themeNight }

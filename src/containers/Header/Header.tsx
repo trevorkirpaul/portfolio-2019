@@ -7,6 +7,7 @@ import Layout from '../../components/Layout'
 import NavBar from '../../components/NavBar'
 import withApplicationContext from '../../shared/HoC/withApplicationContext'
 import { ApplicationContextState } from '../../shared/context/Application'
+import { themeDay } from '../../shared/theme'
 
 export interface HeaderProps extends RouteComponentProps {
   applicationContext: ApplicationContextState
@@ -42,7 +43,10 @@ const Header = ({
           onClick={() => setTheme(theme === 'day' ? 'night' : 'day')}
           disabled={false}
         >
-          <Icon type='Moon' />
+          <Icon
+            type={theme === 'day' ? 'Moon' : 'Sun'}
+            color={theme === 'day' ? '#383838' : themeDay.color.base.amber}
+          />
         </Button>
       </Layout.Flex>
     </Layout>
