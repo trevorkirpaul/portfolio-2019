@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import Flex from './components/Flex'
 import Hero from './components/Hero'
 import Spacer from './components/Spacer'
 import Section from './components/Section'
@@ -27,6 +28,7 @@ export interface LayoutProps {
  * anytime that a div would be used
  */
 class Layout extends Component<LayoutProps> {
+  static Flex = Flex
   static Hero = Hero
   static Spacer = Spacer
   static Section = Section
