@@ -3,7 +3,7 @@ import { Link as RRLink } from 'react-router-dom'
 
 const LinkBaseStyles = css`
   text-decoration: none;
-  color: #383838;
+  color: ${props => props.theme.color.foregroundPrimary};
   border-bottom: 1px solid #383838;
   padding-bottom: 2px;
 
