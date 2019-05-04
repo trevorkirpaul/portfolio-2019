@@ -35,6 +35,12 @@ const Header = ({
               name: 'contact',
               url: '/contact',
               active: pathname === '/contact'
+            },
+            {
+              id: '003',
+              name: 'snippets',
+              url: '/snippets',
+              active: pathname === '/snippets'
             }
           ]}
         />
