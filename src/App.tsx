@@ -16,6 +16,30 @@ const GlobalStyle = createGlobalStyle`
 const App = () => {
   const [theme, setTheme] = React.useState('day')
 
+  React.useEffect(() => {
+    const cachedTheme = localStorage.getItem('cachedTheme')
+
+    /**
+     * Check if we have a cached value for the theme
+     * and use it
+     */
+    if (cachedTheme && theme !== cachedTheme) {
+      setTheme(cachedTheme)
+    }
+  })
+
+  /**
+   * **setThemeAndCache** is used to set the theme as well as
+   * caching the theme for future visits
+   *
+   * @param theme string
+   */
+  const setThemeAndCache = (theme: string) => {
+    localStorage.setItem('cachedTheme', theme)
+
+    return setTheme(theme)
+  }
+
   return (
     <ThemeProvider theme={theme === 'day' ? themeDay : themeNight}>
       <React.Fragment>
@@ -23,7 +47,7 @@ const App = () => {
         <ApplicationContext.Provider
           value={{
             theme,
-            setTheme
+            setTheme: setThemeAndCache
           }}
         >
           <Router />

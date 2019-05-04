@@ -10,7 +10,8 @@ export interface ApplicationContextState {
    * **setTheme** is a function which
    * sets the value for `theme`
    */
-  setTheme: Dispatch<SetStateAction<string>>
+  // setTheme: Dispatch<SetStateAction<string>>
+  setTheme: (theme: string) => void
 }
 
 const ApplicationContext = React.createContext({
