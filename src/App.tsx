@@ -2,10 +2,10 @@ import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import { ThemeProvider } from 'styled-components'
 
-import { themeDay, themeNight } from './shared/theme'
+import { themeDay, themeNight } from 'shared/theme'
 
-import ApplicationContext from './shared/context/Application'
-import Router from './containers/Router'
+import ApplicationContext from 'shared/context/Application'
+import Router from 'containers/Router'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -26,7 +26,7 @@ const App = () => {
     if (cachedTheme && theme !== cachedTheme) {
       setTheme(cachedTheme)
     }
-  })
+  }, [theme])
 
   /**
    * **setThemeAndCache** is used to set the theme as well as

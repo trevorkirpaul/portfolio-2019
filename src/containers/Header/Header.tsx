@@ -1,13 +1,13 @@
 import React from 'react'
 import { RouteComponentProps, withRouter } from 'react-router-dom'
 
-import Button from '../../components/Button'
-import Icon from '../../components/Icon'
-import Layout from '../../components/Layout'
-import NavBar from '../../components/NavBar'
-import withApplicationContext from '../../shared/HoC/withApplicationContext'
-import { ApplicationContextState } from '../../shared/context/Application'
-import { themeDay } from '../../shared/theme'
+import Button from 'components/Button'
+import Icon from 'components/Icon'
+import Layout from 'components/Layout'
+import NavBar from 'components/NavBar'
+import withApplicationContext from 'shared/HoC/withApplicationContext'
+import { ApplicationContextState } from 'shared/context/Application'
+import { themeDay } from 'shared/theme'
 
 export interface HeaderProps extends RouteComponentProps {
   applicationContext: ApplicationContextState
