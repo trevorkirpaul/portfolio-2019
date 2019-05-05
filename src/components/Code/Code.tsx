@@ -6,7 +6,7 @@ import {
   atomOneLight
 } from 'react-syntax-highlighter/dist/styles/hljs'
 
-import ApplicationContext from '../../shared/context/Application'
+import ApplicationContext from 'shared/context/Application'
 
 export interface CodeProps {
   source: string

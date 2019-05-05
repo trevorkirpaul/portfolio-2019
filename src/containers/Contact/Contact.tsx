@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-import TitlePanel from '../../components/TitlePanel'
-import Link from '../../components/Link'
+import Layout from 'components/Layout'
+import TitlePanel from 'components/TitlePanel'
+import Link from 'components/Link'
 
 const Contact = () => (
   <Layout>

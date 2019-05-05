@@ -1,8 +1,8 @@
-import React, { JSXElementConstructor, ComponentType } from 'react'
+import React, { ComponentType } from 'react'
 
 import ApplicationContext, {
   ApplicationContextState
-} from '../context/Application'
+} from 'shared/context/Application'
 
 export interface WrappedComponentProps {
   applicationContext: ApplicationContextState
