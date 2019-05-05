@@ -24,9 +24,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - changelog
-- `_redirects` file to enable client-site routing correctly for [netlify](https://www.slightedgecoder.com/2018/12/18/page-not-found-on-netlify-with-react-router/)
+- Storybook, a UI testing library
+- Stories for all components
 
 ### Changed
 
 - updated CRA to 3.0
 - local imports updated to absolute imports
+
+### Fixed
+
+- `_redirects` file to enable client-site routing correctly for [netlify](https://www.slightedgecoder.com/2018/12/18/page-not-found-on-netlify-with-react-router/)
