@@ -7,7 +7,7 @@ import Contact from 'containers/Contact'
 import Snippets from 'containers/Snippets'
 
 const Router = () => (
-  <BrowserRouter>
+  <BrowserRouter basename='/'>
     <React.Fragment>
       <Header />
       <Switch>
