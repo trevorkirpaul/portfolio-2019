@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import Home from '../Home'
-import Header from '../Header'
-import Contact from '../Contact'
-import Snippets from '../Snippets'
+import Home from 'containers/Home'
+import Header from 'containers/Header'
+import Contact from 'containers/Contact'
+import Snippets from 'containers/Snippets'
 
 const Router = () => (
-  <BrowserRouter>
+  <BrowserRouter basename='/'>
     <React.Fragment>
       <Header />
       <Switch>

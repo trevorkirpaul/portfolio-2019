@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/Layout'
-import TitlePanel from '../../components/TitlePanel'
-import Text from '../../components/Text'
+import Layout from 'components/Layout'
+import TitlePanel from 'components/TitlePanel'
+import Text from 'components/Text'
 
 const Home = () => (
   <Layout>

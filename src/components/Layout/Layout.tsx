@@ -8,6 +8,10 @@ import Section from './components/Section'
 import * as S from './styles'
 
 export interface LayoutProps {
+  /**
+   * `React.ReactNode` which is the contents
+   * of the Layout
+   */
   children: React.ReactNode
 }
 

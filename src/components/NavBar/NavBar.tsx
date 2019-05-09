@@ -1,11 +1,22 @@
 import React from 'react'
 
-import Link from '../Link'
-import Text from '../Text'
+import Link from 'components/Link'
+import Text from 'components/Text'
 
 import * as S from './styles'
 
 export interface NavBarProps {
+  /**
+   * **links** is an `array` of `objects`
+   * which represet each link 'item'
+   *
+   * {
+   *  id: string
+   *  name: string
+   *  url: string
+   *  active: boolean
+   * }
+   */
   links: {
     id: string
     name: string

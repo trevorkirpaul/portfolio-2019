@@ -3,10 +3,9 @@
 ## ToDo
 
 - [x] implement theming via `styled-components`
-- [ ] add changelog
+- [x] add changelog
 - [ ] add comments for all interfaces
-- [ ] implement testing (Jest/write tests)
-- [ ] implement storybook
+- [x] implement storybook
 
 ## About
 
