@@ -10,8 +10,8 @@ export interface LinkProps {
    * standard HTML anchor tag based elements' `href`, so
    * its typing is designed to handle either/or.
    *
-   * It's a required prop whiles **to** which is what
-   * the React Router Link uses (taking in **url**) is optional,
+   * It's a required prop whiles **to**, which is what
+   * the React Router Link uses (taking in **url**), is optional
    * since the anchor tag version of this component does not
    * require **to**.
    */

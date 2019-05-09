@@ -17,16 +17,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 `Security` in case of vulnerabilities
 
+> Dates are formatted as `YYYY-MM-DD`, largest to smallest
+
 ## [Unreleased]
 
-## [0.0.1] - 2019-05-05
+## [0.0.1] - 2019-05-09
 
 ### Added
 
 - changelog
-- `_redirects` file to enable client-site routing correctly for [netlify](https://www.slightedgecoder.com/2018/12/18/page-not-found-on-netlify-with-react-router/)
+- Storybook, a UI testing library
+- Stories for all components
+- comments for multiple components' interfaces
+- explicit `paragraph` type for **Text** component, rather than only relying on the default
+- Ramda package
 
 ### Changed
 
 - updated CRA to 3.0
 - local imports updated to absolute imports
+- **TitlePanel** styles to use Ramda helper function, `pathOr` when deriving theme values from nested properties
+
+### Fixed
+
+- `_redirects` file to enable client-site routing correctly for [netlify](https://www.slightedgecoder.com/2018/12/18/page-not-found-on-netlify-with-react-router/)
