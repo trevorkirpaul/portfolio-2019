@@ -7,7 +7,7 @@ const Span = styled.span<TextProps>`
   color: ${props => props.theme.color.foregroundPrimary};
 
   font-size: ${props =>
-    R.pathOr('14px', ['theme', 'typography', 'size', 'regular'], props)};
+    R.pathOr('14px', ['theme', 'typography', 'size', props.size], props)};
 `
 
 const Paragraph = styled.p<TextProps>`
@@ -19,7 +19,7 @@ const Paragraph = styled.p<TextProps>`
     R.pathOr('sans-serif', ['theme', 'typography', 'fontFamily'], props)};
 
   font-size: ${props =>
-    R.pathOr('14px', ['theme', 'typography', 'size', 'regular'], props)};
+    R.pathOr('14px', ['theme', 'typography', 'size', props.size], props)};
 `
 
 export { Span, Paragraph }
