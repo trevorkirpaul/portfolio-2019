@@ -94,6 +94,35 @@ const SuccessToastWithState = () => {
   )
 }
 
+const SolidButton = styled(Button)`
+  background: #383838;
+  color: palegoldenrod;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  margin-bottom: 2.5px;
+`
+
+const ToastWithButton = () => {
+  const [visible, toggleVisibility] = React.useState(true)
+
+  const onClick = () => toggleVisibility(!visible)
+  return (
+    <React.Fragment>
+      <Toast
+        domNodeID={TOAST_ROOT}
+        visible={visible}
+        background='palegoldenrod'
+        color='#383838'
+      >
+        <ToastIcon type='CheckCircle' color='#383838' />
+        <ToastLabel>Subscribe to our mailing list</ToastLabel>
+        <SolidButton onClick={onClick}>Okay!</SolidButton>
+      </Toast>
+    </React.Fragment>
+  )
+}
+
 storiesOf('Toast', module)
   .addDecorator(storyFn => addDivDecorator(storyFn, TOAST_ROOT))
   .addDecorator(storyFn => themeDecorator(storyFn))
@@ -107,3 +136,4 @@ storiesOf('Toast', module)
       <WarningToastWithState />
     </React.Fragment>
   ))
+  .add('Toast with Button', () => <ToastWithButton />)

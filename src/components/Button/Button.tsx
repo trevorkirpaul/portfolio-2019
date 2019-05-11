@@ -18,10 +18,11 @@ export interface ButtonProps {
    * and an on-hover effect
    */
   disabled?: boolean
+  className?: string
 }
 
-const Button = ({ children, disabled, onClick }: ButtonProps) => (
-  <S.Button onClick={onClick} disabled={disabled}>
+const Button = ({ children, disabled, onClick, className }: ButtonProps) => (
+  <S.Button className={className} onClick={onClick} disabled={disabled}>
     {children}
   </S.Button>
 )
