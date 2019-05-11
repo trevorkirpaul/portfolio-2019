@@ -17,7 +17,7 @@ export interface ButtonProps {
    * adds extra styling such as lower opacity
    * and an on-hover effect
    */
-  disabled: boolean
+  disabled?: boolean
 }
 
 const Button = ({ children, disabled, onClick }: ButtonProps) => (
@@ -25,5 +25,9 @@ const Button = ({ children, disabled, onClick }: ButtonProps) => (
     {children}
   </S.Button>
 )
+
+Button.defaultProps = {
+  disabled: false
+}
 
 export default Button
