@@ -14,7 +14,7 @@ export interface TextProps {
   type: string
   children: React.ReactNode
   className?: string
-  size?: string
+  size: string
 }
 
 const Text = ({ type, children, className, size }: TextProps) => {
