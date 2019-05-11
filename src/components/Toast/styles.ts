@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { animated } from 'react-spring'
 
 import { ContentProps } from './components/Content'
 
@@ -40,4 +41,6 @@ const Content = styled.div<ContentProps>`
   }}
 `
 
-export { Toast, Content }
+const AnimatedContent = animated(Content)
+
+export { Toast, AnimatedContent as Content }

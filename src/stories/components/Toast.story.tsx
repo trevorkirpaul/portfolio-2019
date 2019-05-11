@@ -33,10 +33,13 @@ const ToastWithState = () => {
   return (
     <React.Fragment>
       <Button onClick={onClick}>Show Toast: {visible ? 'ON' : 'OFF'}</Button>
-      <Toast domNodeID={TOAST_ROOT} visible={visible}>
-        <Toast.Content background='skyblue'>
-          <ToastLabel>This is a Toast notification!</ToastLabel>
-        </Toast.Content>
+      <Toast
+        domNodeID={TOAST_ROOT}
+        visible={visible}
+        background='lightblue'
+        color='#383838'
+      >
+        <ToastLabel>This is a Toast notification!</ToastLabel>
       </Toast>
     </React.Fragment>
   )
@@ -49,13 +52,11 @@ const DangerToastWithState = () => {
   return (
     <React.Fragment>
       <Button onClick={onClick}>Show Toast: {visible ? 'ON' : 'OFF'}</Button>
-      <Toast domNodeID={TOAST_ROOT} visible={visible}>
-        <Toast.Content danger>
-          <ToastIcon type='XCircle' color='#f8f8f8' />
-          <ToastLabelLight>
-            This is a "danger" theme Toast notification!
-          </ToastLabelLight>
-        </Toast.Content>
+      <Toast domNodeID={TOAST_ROOT} visible={visible} danger>
+        <ToastIcon type='XCircle' color='#f8f8f8' />
+        <ToastLabelLight>
+          This is a "danger" theme Toast notification!
+        </ToastLabelLight>
       </Toast>
     </React.Fragment>
   )
@@ -68,11 +69,9 @@ const WarningToastWithState = () => {
   return (
     <React.Fragment>
       <Button onClick={onClick}>Show Toast: {visible ? 'ON' : 'OFF'}</Button>
-      <Toast domNodeID={TOAST_ROOT} visible={visible}>
-        <Toast.Content warning>
-          <ToastIcon type='AlertCircle' color='#383838' />
-          <ToastLabel>This is a "warning" theme Toast notification!</ToastLabel>
-        </Toast.Content>
+      <Toast domNodeID={TOAST_ROOT} visible={visible} warning>
+        <ToastIcon type='AlertCircle' color='#383838' />
+        <ToastLabel>This is a "warning" theme Toast notification!</ToastLabel>
       </Toast>
     </React.Fragment>
   )
@@ -85,13 +84,11 @@ const SuccessToastWithState = () => {
   return (
     <React.Fragment>
       <Button onClick={onClick}>Show Toast: {visible ? 'ON' : 'OFF'}</Button>
-      <Toast domNodeID={TOAST_ROOT} visible={visible}>
-        <Toast.Content success>
-          <ToastIcon type='CheckCircle' color='#f8f8f8' />
-          <ToastLabelLight>
-            This is a "success" theme Toast notification!
-          </ToastLabelLight>
-        </Toast.Content>
+      <Toast domNodeID={TOAST_ROOT} visible={visible} success>
+        <ToastIcon type='CheckCircle' color='#f8f8f8' />
+        <ToastLabelLight>
+          This is a "success" theme Toast notification!
+        </ToastLabelLight>
       </Toast>
     </React.Fragment>
   )
@@ -104,3 +101,9 @@ storiesOf('Toast', module)
   .add('danger', () => <DangerToastWithState />)
   .add('warning', () => <WarningToastWithState />)
   .add('success', () => <SuccessToastWithState />)
+  .add('multiple Toasts', () => (
+    <React.Fragment>
+      <DangerToastWithState />
+      <WarningToastWithState />
+    </React.Fragment>
+  ))
