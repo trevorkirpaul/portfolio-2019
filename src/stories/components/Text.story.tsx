@@ -11,7 +11,7 @@ storiesOf('Text', module)
   .add('base (P)', () => (
     <React.Fragment>
       <Text>
-        This is the deafult Text element, using a Paragraph element as its base
+        This is the defult Text element, using a Paragraph element as its base
       </Text>
     </React.Fragment>
   ))
