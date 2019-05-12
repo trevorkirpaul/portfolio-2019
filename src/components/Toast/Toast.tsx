@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { useTransition, animated } from 'react-spring'
+import { useTransition } from 'react-spring'
 
 import Content from './components/Content'
 
