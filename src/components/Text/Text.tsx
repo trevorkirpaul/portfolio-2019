@@ -13,22 +13,37 @@ export interface TextProps {
    */
   type: string
   children: React.ReactNode
+  className?: string
+  size: string
 }
 
-const Text = ({ type, children }: TextProps) => {
+const Text = ({ type, children, className, size }: TextProps) => {
   switch (type) {
     case 'span':
-      return <S.Span>{children}</S.Span>
+      return (
+        <S.Span type={type} className={className} size={size}>
+          {children}
+        </S.Span>
+      )
     case 'paragraph':
-      return <S.Paragraph>{children}</S.Paragraph>
+      return (
+        <S.Paragraph type={type} className={className} size={size}>
+          {children}
+        </S.Paragraph>
+      )
     default:
-      return <S.Paragraph>{children}</S.Paragraph>
+      return (
+        <S.Paragraph type={type} className={className} size={size}>
+          {children}
+        </S.Paragraph>
+      )
   }
 }
 
 Text.defaultProps = {
   type: 'paragraph',
-  children: 'missing text'
+  children: 'missing text',
+  size: 'regular'
 }
 
 export default Text

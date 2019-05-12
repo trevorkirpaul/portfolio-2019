@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf, addDecorator } from '@storybook/react'
 
 import Layout from 'components/Layout'
+import Text from 'components/Text'
 
 import themeDecorator from '../themeDecorator'
 
@@ -11,22 +12,22 @@ storiesOf('Layout', module)
   .add('Layout (wrapper)', () => (
     <React.Fragment>
       <Layout>
-        <span>This is wrapped by a Layout component</span>
+        <Text>This is wrapped by a Layout component</Text>
       </Layout>
     </React.Fragment>
   ))
   .add('Spacer', () => (
     <React.Fragment>
       <Layout>
-        <span>Text Element</span>
+        <Text>Text Element</Text>
 
         <Layout.Spacer marginTop='15px' marginBottom='35px' />
 
-        <span>
+        <Text>
           "Layout.Spacer" is used above this Text Element to add margin based
           spacing easily, without needing to update the styles for the Text
           Element
-        </span>
+        </Text>
       </Layout>
     </React.Fragment>
   ))
@@ -34,7 +35,7 @@ storiesOf('Layout', module)
     <React.Fragment>
       <Layout>
         <Layout.Hero>
-          <span>This is Text Element is inside a Layout.Hero element.</span>
+          <Text>This is Text Element is inside a Layout.Hero element.</Text>
         </Layout.Hero>
       </Layout>
     </React.Fragment>
@@ -43,7 +44,7 @@ storiesOf('Layout', module)
     <React.Fragment>
       <Layout>
         <Layout.Section>
-          <span>This is Text Element is inside a Layout.Section element.</span>
+          <Text>This is Text Element is inside a Layout.Section element.</Text>
         </Layout.Section>
       </Layout>
     </React.Fragment>

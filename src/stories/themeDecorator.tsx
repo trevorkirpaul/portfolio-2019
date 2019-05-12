@@ -7,7 +7,7 @@ const theme = 'day'
 
 /**
  * **themeDecorator** is used to wrap `themeProvider`
- * around a sstory easily. This helps us style our 'themed'
+ * around a story easily. This helps us style our 'themed'
  * styled components correctly using the same theme from
  * the App
  */

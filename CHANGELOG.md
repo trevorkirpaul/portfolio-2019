@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - README updated with storybook, changelog, and better description sections + netlify status badge
+- added `Toast` component
 
 ## [0.0.1] - 2019-05-09
 
