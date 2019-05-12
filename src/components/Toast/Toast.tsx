@@ -59,11 +59,11 @@ export interface ToastProps {
    * `boolean` which determines if **Toast** is rendered
    */
   visible: boolean
-  background?: string
-  color?: string
-  danger?: boolean
-  success?: boolean
-  warning?: boolean
+  background: string
+  color: string
+  danger: boolean
+  success: boolean
+  warning: boolean
 }
 
 /**
@@ -79,6 +79,14 @@ export interface ToastProps {
  * other elements.
  */
 class Toast extends React.Component<ToastProps> {
+  static defaultProps = {
+    background: '#383838',
+    color: '#f8f8f8',
+    danger: false,
+    success: false,
+    warning: false
+  }
+
   static Content = Content
 
   render() {
