@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- added `Toast` component
+
 ## [0.0.1] - 2019-05-09
 
 ### Added
