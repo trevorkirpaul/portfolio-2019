@@ -6,7 +6,7 @@ import { ContentProps } from './components/Content'
 const Toast = styled.div``
 
 const Content = styled.div<ContentProps>`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;

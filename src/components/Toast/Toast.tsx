@@ -1,49 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { useTransition } from 'react-spring'
+import { Transition } from 'react-spring/renderprops'
 
 import Content from './components/Content'
-
-const RenderChildrenWithAnimation = ({
-  children,
-  visible,
-  background,
-  color,
-  danger,
-  success,
-  warning
-}: {
-  children: React.ReactNode
-  visible: boolean
-  background: string
-  color: string
-  danger: boolean
-  success: boolean
-  warning: boolean
-}) => {
-  const transition = useTransition(visible, null, {
-    from: { opacity: 0, bottom: -50, position: 'absolute' },
-    enter: { opacity: 1, bottom: 0 },
-    leave: { opacity: 0 }
-  })
-
-  return transition.map(
-    ({ item, key, props }: { item?: any; key: any; props: any }) =>
-      item && (
-        <Content
-          key={key}
-          style={props}
-          background={background}
-          color={color}
-          danger={danger}
-          success={success}
-          warning={warning}
-        >
-          {children}
-        </Content>
-      )
-  )
-}
 
 export interface ToastProps {
   /**
@@ -64,6 +23,7 @@ export interface ToastProps {
   danger: boolean
   success: boolean
   warning: boolean
+  className?: string
 }
 
 /**
@@ -98,7 +58,8 @@ class Toast extends React.Component<ToastProps> {
       color,
       danger,
       success,
-      warning
+      warning,
+      className
     } = this.props
 
     const el = document.getElementById(domNodeID)
@@ -108,15 +69,33 @@ class Toast extends React.Component<ToastProps> {
     }
 
     return ReactDOM.createPortal(
-      <RenderChildrenWithAnimation
-        background={background}
-        color={color}
-        danger={danger}
-        success={success}
-        warning={warning}
-        children={children}
-        visible={visible}
-      />,
+      React.cloneElement(
+        <React.Fragment>
+          <Transition
+            items={visible}
+            from={{ opacity: 0 }}
+            enter={{ opacity: 1 }}
+            leave={{ opacity: 0 }}
+          >
+            {show =>
+              show &&
+              (props => (
+                <Content
+                  style={props}
+                  background={background}
+                  color={color}
+                  danger={danger}
+                  success={success}
+                  warning={warning}
+                  className={className}
+                >
+                  {children}
+                </Content>
+              ))
+            }
+          </Transition>
+        </React.Fragment>
+      ),
       el
     )
   }
