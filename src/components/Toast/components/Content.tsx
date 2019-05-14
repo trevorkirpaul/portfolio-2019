@@ -10,8 +10,8 @@ export interface ContentProps {
   success?: boolean
   warning?: boolean
   className?: string
-  key?: any
   style?: any
+  responsive: boolean
 }
 
 const Content = ({
@@ -22,8 +22,8 @@ const Content = ({
   success,
   warning,
   className,
-  key,
-  style
+  style,
+  responsive
 }: ContentProps) => (
   <S.Content
     className={className}
@@ -32,8 +32,8 @@ const Content = ({
     danger={danger}
     success={success}
     warning={warning}
-    key={key}
     style={style}
+    responsive={responsive}
   >
     {children}
   </S.Content>

@@ -6,7 +6,7 @@ import { ContentProps } from './components/Content'
 const Toast = styled.div``
 
 const Content = styled.div<ContentProps>`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -39,6 +39,17 @@ const Content = styled.div<ContentProps>`
       `
     }
   }}
+
+  ${({ responsive }) =>
+    responsive &&
+    css`
+      max-width: 250px;
+      bottom: 24px;
+      right: 24px;
+      margin: 25px;
+      padding: 25px;
+      border-radius: 5px;
+    `}
 `
 
 const AnimatedContent = animated(Content)
