@@ -11,6 +11,7 @@ export interface ContentProps {
   warning?: boolean
   className?: string
   style?: any
+  responsive: boolean
 }
 
 const Content = ({
@@ -21,7 +22,8 @@ const Content = ({
   success,
   warning,
   className,
-  style
+  style,
+  responsive
 }: ContentProps) => (
   <S.Content
     className={className}
@@ -31,6 +33,7 @@ const Content = ({
     success={success}
     warning={warning}
     style={style}
+    responsive={responsive}
   >
     {children}
   </S.Content>

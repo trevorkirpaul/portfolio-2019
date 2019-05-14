@@ -123,6 +123,27 @@ const ToastWithButton = () => {
   )
 }
 
+const ResponsiveToastWithButton = () => {
+  const [visible, toggleVisibility] = React.useState(true)
+
+  const onClick = () => toggleVisibility(!visible)
+  return (
+    <React.Fragment>
+      <Toast
+        domNodeID={TOAST_ROOT}
+        visible={visible}
+        background='palegoldenrod'
+        color='#383838'
+        responsive
+      >
+        <ToastIcon type='CheckCircle' color='#383838' />
+        <ToastLabel>Subscribe to our mailing list</ToastLabel>
+        <SolidButton onClick={onClick}>Okay!</SolidButton>
+      </Toast>
+    </React.Fragment>
+  )
+}
+
 storiesOf('Toast', module)
   .addDecorator(storyFn => addDivDecorator(storyFn, TOAST_ROOT))
   .addDecorator(storyFn => themeDecorator(storyFn))
@@ -137,3 +158,4 @@ storiesOf('Toast', module)
     </React.Fragment>
   ))
   .add('Toast with Button', () => <ToastWithButton />)
+  .add('Responsive Toast with Button', () => <ResponsiveToastWithButton />)
