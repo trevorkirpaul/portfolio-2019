@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
 import Toast from 'components/Toast'
-import Text from 'components/Text'
+import TextBase from 'components/Text'
 import Button from 'components/Button'
 
 const WelcomeToast = styled(Toast)`
   padding: 10px;
 `
 
-const Label = styled(Text)`
+const Label = styled(TextBase)`
   color: #f8f8f8;
 `
 
@@ -20,4 +20,8 @@ const ToastButton = styled(Button)`
   border-radius: 5px;
 `
 
-export { WelcomeToast, Label, ToastButton }
+const Text = styled(TextBase)`
+  margin-bottom: 10px;
+`
+
+export { WelcomeToast, Label, ToastButton, Text }
