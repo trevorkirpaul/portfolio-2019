@@ -3,9 +3,13 @@ import { Link as RRLink } from 'react-router-dom'
 
 const LinkBaseStyles = css`
   text-decoration: none;
-  color: #383838;
+  color: ${({ theme }) => theme.foregroundPrimary};
   border-bottom: 1px solid #383838;
   padding-bottom: 2px;
+
+  &:visited {
+    color: palevioletred;
+  }
 
   &:hover {
     color: palevioletred;
@@ -19,7 +23,7 @@ const Link = styled.a`
 
 // in order to handle the DOM not wanting boolean values
 // I'm creating an interface specifically for `RouterLink`
-// rather than using `Link` components' interfact from
+// rather than using `Link` components' interact from
 // './Link.tsx
 interface RouterLinkProps {
   active: string
