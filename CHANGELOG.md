@@ -21,11 +21,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.2] = 2019-06-30
+
 ### Changed
 
 - README updated with storybook, changelog, and better description sections + netlify status badge
 - added `Toast` component
 - added `Modal` component
+- major updates to Home and Snippets
+
+### Added
+
+- Heading component
 
 ## [0.0.1] - 2019-05-09
 
