@@ -4,15 +4,9 @@ import Layout from 'components/Layout'
 import TitlePanel from 'components/TitlePanel'
 import Text from 'components/Text'
 
-import WelcomeToast from './components/WelcomeToast'
-
 const Home = () => {
-  const [visible, toggleVisibility] = React.useState(true)
-
   return (
     <Layout>
-      <WelcomeToast visible={visible} toggleVisibility={toggleVisibility} />
-
       <TitlePanel title='Trevor Kirpaul' subTitle='Web Developer' />
 
       <Layout.Spacer marginTop='15px' marginBottom='35px' />
