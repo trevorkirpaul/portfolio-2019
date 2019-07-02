@@ -13,13 +13,14 @@ export interface IconProps {
    * `string` which sets the stroke color
    */
   color: string
+  className?: string
 }
 
-const Icon = ({ type, color }: IconProps) => {
+const Icon = ({ type, color, className }: IconProps) => {
   const IconFromType = (I as any)[type]
 
   return (
-    <S.Icon>
+    <S.Icon className={className}>
       <IconFromType color={color} />
     </S.Icon>
   )

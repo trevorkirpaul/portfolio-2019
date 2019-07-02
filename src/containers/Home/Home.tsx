@@ -3,52 +3,77 @@ import React from 'react'
 import Layout from 'components/Layout'
 import TitlePanel from 'components/TitlePanel'
 import Text from 'components/Text'
+import Heading from 'components/Heading'
+import Link from 'components/Link'
 
-const Home = () => (
-  <Layout>
-    <TitlePanel title='Trevor Kirpaul' subTitle='Web Developer' />
+import * as S from './styles'
 
-    <Layout.Spacer marginTop='15px' marginBottom='35px' />
+const Home = () => {
+  return (
+    <Layout>
+      <TitlePanel title='Trevor Kirpaul' subTitle='Web Developer' />
 
-    <Layout.Hero>
-      <Text>
-        I'm currently specialized in Front End development using React
-        professionally but I am also very comfortable with other aspects of
-        programming.
-      </Text>
+      <Layout.Spacer marginTop='15px' marginBottom='35px' />
 
-      <Layout.Spacer marginBottom='25px' />
+      <Layout.Hero>
+        <Text>
+          I'm currently specialized in Front End development using React
+          professionally but my passion for programming extends in many
+          different directions.
+        </Text>
+      </Layout.Hero>
 
-      <Text>
-        Currently, outside of work, I love working on personal projects,
-        computer hardware, playing video games, and watching awesome shows like
-        Game of Thrones!
-      </Text>
+      <Layout.Spacer marginTop='15px' marginBottom='35px' />
 
-      <Layout.Spacer marginBottom='25px' />
+      <Layout.Hero>
+        <Heading as='h2'>What I'm Currently Working On</Heading>
+      </Layout.Hero>
 
-      <Text>
-        My main personal projects currently involve this site as well as a
-        larger, long-term web app with the focus being to show off how GraphQL
-        can be a benefit over only exposing REST endpoints.
-      </Text>
+      <Layout.Spacer marginTop='15px' marginBottom='35px' />
 
-      <Layout.Spacer marginBottom='25px' />
+      <Layout.Hero>
+        <Heading as='h3'>storybook-feedback</Heading>
+        <Layout.Spacer marginTop='0px' marginBottom='15px' />
 
-      <Text>
-        I'm always creating new React projects to experiment with codebase
-        organization, documentation, communication, and other project management
-        ideas that lean more towards developers.
-      </Text>
+        <Link
+          type='external'
+          url='https://github.com/trevorkirpaul/storybook-feedback'
+        >
+          Github
+        </Link>
 
-      <Layout.Spacer marginBottom='25px' />
+        <Layout.Spacer marginTop='0px' marginBottom='5px' />
 
-      <Text>
-        I'm continually seeking to improve those aspects at work so most of my
-        personal development tim is dedicated to them.
-      </Text>
-    </Layout.Hero>
-  </Layout>
-)
+        <Link
+          type='external'
+          url='https://yarnpkg.com/en/package/storybook-feedback'
+        >
+          Yarn Package Listing
+        </Link>
+
+        <Layout.Spacer marginTop='0px' marginBottom='15px' />
+
+        <S.Text>
+          Storybook is a platform that helps with visually testing
+          components/code. It's one of my favorite tools and it supports addons
+          which can greatly extend the experience.
+        </S.Text>
+
+        <S.Text>
+          I created `storybook-addon` because I wanted an easy and immediate way
+          to communicate about a story. We are using storybook during testing
+          and if a designer notices a bug then this addon allows them to easily
+          document that problem.
+        </S.Text>
+
+        <S.Text>
+          This project has been a great experience with creating an NPM package.
+          There's a lot of extra work involved with ensuring sharable code is
+          lightweight and easy to use for others.
+        </S.Text>
+      </Layout.Hero>
+    </Layout>
+  )
+}
 
 export default Home

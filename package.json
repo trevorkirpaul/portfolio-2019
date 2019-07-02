@@ -10,16 +10,17 @@
     "@types/react-dom": "16.8.4",
     "@types/react-router-dom": "^4.3.2",
     "@types/react-syntax-highlighter": "^10.1.0",
-    "@types/styled-components": "^4.1.14",
+    "@types/styled-components": "^4.1.16",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-feather": "^1.1.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
+    "react-spring": "^8.0.20",
     "react-syntax-highlighter": "^10.2.1",
-    "styled-components": "^4.2.0",
-    "typescript": "3.4.4"
+    "styled-components": "^4.3.2",
+    "typescript": "^3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
