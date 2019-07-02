@@ -3,13 +3,15 @@ import { createGlobalStyle } from 'styled-components'
 import { ThemeProvider } from 'styled-components'
 
 import { themeDay, themeNight } from 'shared/theme'
+import { base } from 'shared/utils'
 
 import ApplicationContext from 'shared/context/Application'
 import Router from 'containers/Router'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: ${props => (props.theme === 'day' ? '#e8e8e8' : '#383838')}
+    background: ${props => (props.theme === 'day' ? '#e8e8e8' : '#383838')};
+    font-size: ${base}px;
   }
 `
 
