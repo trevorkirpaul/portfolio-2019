@@ -6,6 +6,7 @@ const LinkBaseStyles = css`
   color: ${({ theme }) => theme.foregroundPrimary};
   border-bottom: 1px solid #383838;
   padding-bottom: 2px;
+  font-size: ${({ theme }) => theme.typography.size.medium};
 
   &:visited {
     color: palevioletred;

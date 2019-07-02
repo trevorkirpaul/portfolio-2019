@@ -1,13 +1,14 @@
 import React from 'react'
 import { RouteComponentProps, withRouter } from 'react-router-dom'
+import Switch from 'react-switch'
 
-import Button from 'components/Button'
 import Icon from 'components/Icon'
 import Layout from 'components/Layout'
 import NavBar from 'components/NavBar'
 import withApplicationContext from 'shared/HoC/withApplicationContext'
 import { ApplicationContextState } from 'shared/context/Application'
-import { themeDay } from 'shared/theme'
+
+import * as S from './styles'
 
 export interface HeaderProps extends RouteComponentProps {
   applicationContext: ApplicationContextState
@@ -18,6 +19,15 @@ const Header = ({
   applicationContext: { theme, setTheme }
 }: HeaderProps) => {
   const { pathname } = location
+
+  // @checked - future state, not current
+  const handleOnChange = (checked: boolean) => {
+    if (!checked) {
+      return setTheme('day')
+    }
+
+    return setTheme('night')
+  }
 
   return (
     <Layout>
@@ -45,15 +55,23 @@ const Header = ({
           ]}
         />
 
-        <Button
-          onClick={() => setTheme(theme === 'day' ? 'night' : 'day')}
-          disabled={false}
-        >
-          <Icon
-            type={theme === 'day' ? 'Moon' : 'Sun'}
-            color={theme === 'day' ? '#383838' : themeDay.color.base.amber}
-          />
-        </Button>
+        <Switch
+          onChange={handleOnChange}
+          checked={theme === 'night'}
+          checkedIcon={
+            <S.IconWrap>
+              <Icon type='Moon' />
+            </S.IconWrap>
+          }
+          uncheckedIcon={
+            <S.IconWrap>
+              <Icon type='Sun' color='#f8f8f8' />
+            </S.IconWrap>
+          }
+          height={35}
+          width={75}
+          onColor='#ffc107'
+        />
       </Layout.Flex>
     </Layout>
   )
