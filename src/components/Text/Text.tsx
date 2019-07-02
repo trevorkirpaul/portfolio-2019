@@ -43,7 +43,7 @@ const Text = ({ type, children, className, size }: TextProps) => {
 Text.defaultProps = {
   type: 'paragraph',
   children: 'missing text',
-  size: 'regular'
+  size: 'medium'
 }
 
 export default Text
