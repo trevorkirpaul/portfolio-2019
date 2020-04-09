@@ -16,7 +16,7 @@
     "react-dom": "^16.8.6",
     "react-feather": "^1.1.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
+    "react-scripts": "3.4.1",
     "react-spring": "^8.0.20",
     "react-switch": "^5.0.0",
     "react-syntax-highlighter": "^10.2.1",
