@@ -17,16 +17,51 @@ const Home = () => {
 
       <Layout.Hero>
         <Text>
-          I'm currently specialized in Front End development using React
-          professionally but my passion for programming extends in many
-          different directions.
+          I'm currently specialized in Front End development using React, Vue,
+          and Web Components professionally but my passion for programming
+          extends in many different directions.
         </Text>
       </Layout.Hero>
 
       <Layout.Spacer marginTop='15px' marginBottom='35px' />
 
       <Layout.Hero>
-        <Heading as='h2'>What I'm Currently Working On</Heading>
+        <Heading as='h2'>Changelog</Heading>
+      </Layout.Hero>
+
+      <Layout.Spacer marginTop='15px' marginBottom='35px' />
+
+      <Layout.Hero>
+        <Heading as='h3'>[0.0.1] July 23 2020</Heading>
+        <Layout.Spacer marginTop='15px' marginBottom='15px' />
+
+        <Text>
+          I've recently been spending much of my personal development time on
+          getting Keyfolio to a 1.0 / MVP release. It's been a super fun project
+          to work on and I've learned a lot about Strapi (which has finally
+          reached a release version, congrats Strapi team!!!).
+        </Text>
+        <Layout.Spacer marginTop='15px' marginBottom='15px' />
+        <Text>
+          I've also been spending a little time on storybook-feedback. There are
+          major changes coming, switching from firebase to MongoDB and their
+          Realms service. I've had some blockers with Google Auth but I'm
+          planning on switching to rely on creating and storing users using
+          Mongo. This is still a project which is near to my heart since I
+          absolutely love Storybook and one of my major goals has been to
+          produce an NPM package which actually gets used.
+        </Text>
+        <Layout.Spacer marginTop='15px' marginBottom='15px' />
+        <Text>
+          I'll try and continue to post updates following this "Changelog"
+          format!
+        </Text>
+      </Layout.Hero>
+
+      <Layout.Spacer marginTop='15px' marginBottom='35px' />
+
+      <Layout.Hero>
+        <Heading as='h2'>Notable Projects</Heading>
       </Layout.Hero>
 
       <Layout.Spacer marginTop='15px' marginBottom='35px' />
@@ -37,24 +72,19 @@ const Home = () => {
 
         <S.Text>
           Keyfolio is an app for keyboard enthusiasts to track their keyboard
-          collections. This is a project which is close to my heart and a great
-          excuse for developing my experience with a few of my favorite tools.
+          collections and also acts as a database of custom keyboard kits. Users
+          can add keyboards to their list and document their build details.
         </S.Text>
 
         <S.Text>
-          This project will be driven by Strapi for all API needs. This is a
-          great experience for dealing with Strapi in a productions environment
-          and with a decent number of users. Along with TypeScript and
-          Storybook, this will also be another project where I cultivate project
-          and code base organization and refine my development skill. I'm hoping
-          this will be a flagship example on a large, production React codebase.
-          This means heavy use of Storybook, the latest and greatest React
-          patterns, and as much test coverage as possible.
+          I was inspired to create this project when I noticed that many of my
+          friends relied on Google Sheets to track and share their collection.
+          Whiles that method worked fine, I saw a great chance to contribute to
+          a community which I love.
         </S.Text>
 
         <S.Text>
-          Currently this project is still being developed and the repo is
-          private.
+          More details will be available once this project has been released.
         </S.Text>
       </Layout.Hero>
 
