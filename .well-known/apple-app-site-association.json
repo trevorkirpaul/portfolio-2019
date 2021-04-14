@@ -29,5 +29,5 @@
    },
    "webcredentials": {
       "apps": [ "org.reactjs.native.example.optivioRN"  ]
-   },
+   }
 }
