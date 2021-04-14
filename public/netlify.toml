@@ -1,0 +1,44 @@
+[[headers]]
+for = "/apple-app-site-association"
+[headers.values]
+Cache-Control = '''
+      public,
+      max-age=0'''
+Content-Type = "application/json"
+X-Content-Type-Options = "nosniff"
+
+[[headers]]
+for = "/.well-known/apple-app-site-association"
+[headers.values]
+Cache-Control = '''
+      public,
+      max-age=0'''
+Content-Type = "application/json"
+X-Content-Type-Options = "nosniff"
+
+[[headers]]
+for = "/.well-known/assetlinks.json"
+[headers.values]
+Cache-Control = '''
+      public,
+      max-age=0'''
+Content-Type = "application/json"
+X-Content-Type-Options = "nosniff"
+
+[[redirects]]
+force = true
+from = "/apple-app-site-association"
+status = 200
+to = "/.well-known/apple-app-site-association.json"
+
+[[redirects]]
+force = true
+from = "/.well-known/apple-app-site-association"
+status = 200
+to = "/.well-known/apple-app-site-association.json"
+
+[[redirects]]
+force = true
+from = "/*"
+status = 200
+to = "/index.html"
