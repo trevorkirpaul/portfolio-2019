@@ -32,6 +32,31 @@ const Home = () => {
       <Layout.Spacer marginTop='15px' marginBottom='35px' />
 
       <Layout.Hero>
+        <Heading as='h3'>[0.1.0] April 15 2021</Heading>
+        <Layout.Spacer marginTop='15px' marginBottom='15px' />
+
+        <Text>
+          Keyfolio is definitely on hiatus though I've decided to steal its name
+          for my secret full-stack project. The app is and has been live for a
+          year but I don't promote it. MVP status is pretty much there with the
+          exception of the UI which Ie really need to update.
+        </Text>
+        <Layout.Spacer marginTop='15px' marginBottom='15px' />
+        <Text>
+          Work has been going very well! I'm on a very fun project and as
+          alwayse I feel like I'm making an impact. I'm so thankful for my job
+          and myee life but I still have much to improve.
+        </Text>
+        <Layout.Spacer marginTop='15px' marginBottom='15px' />
+        <Text>
+          I've also decided to fully pivot to native development. Mainly
+          focusing on swift, I really enjoy mobile app development so I'm trying
+          to position myself as the "go-to" person for everything Swift/ios
+          related.
+        </Text>
+      </Layout.Hero>
+
+      <Layout.Hero>
         <Heading as='h3'>[0.0.1] July 23 2020</Heading>
         <Layout.Spacer marginTop='15px' marginBottom='15px' />
 
