@@ -1,5 +1,5 @@
 [[headers]]
-for = "/.well-known/apple-app-site-association"
+for = "/apple-app-site-association"
 [headers.values]
 Content-Type = "application/json"
 X-Content-Type-Options = "nosniff"
