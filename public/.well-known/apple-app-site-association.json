@@ -2,11 +2,9 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["org.reactjs.native.example.optivioRN"]
+        "appIDs": ["org.reactjs.native.example.optivioRN"],
+        "paths": ["*"]
       }
     ]
-  },
-  "webcredentials": {
-    "apps": ["org.reactjs.native.example.optivioRN"]
   }
 }
