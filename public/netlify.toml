@@ -7,7 +7,7 @@ X-Content-Type-Options = "nosniff"
 [[redirects]]
 from = "/apple-app-site-association"
 status = 200
-to = "/.well-known/apple-app-site-association.json"
+to = "/.well-known/apple-app-site-association"
 
 [[redirects]]
 from = "/*"
