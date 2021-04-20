@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "org.reactjs.native.example.optivioRN"
+        ],
+        "paths": [
+          "*"
+        ]
+      }
+    ]
+  }
+}
