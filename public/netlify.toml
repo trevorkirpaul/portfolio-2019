@@ -5,11 +5,6 @@ Content-Type = "application/json"
 X-Content-Type-Options = "nosniff"
 
 [[redirects]]
-from = "/apple-app-site-association"
-status = 200
-to = "/apple-app-site-association"
-
-[[redirects]]
 from = "/*"
 status = 200
 to = "/index.html"
